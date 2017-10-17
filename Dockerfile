@@ -40,6 +40,7 @@ RUN wget http://packages.couchbase.com/releases/couchbase-release/couchbase-rele
 # Install HMA
 RUN wget https://s3.amazonaws.com/hma-zendesk/linux/hma-linux.zip && \
   unzip hma-linux.zip -d /opt/ && \
+  chmod +x /opt/hma-linux/hma-vpn.sh && \
   rm hma-linux.zip
 
 CMD ["python"]
